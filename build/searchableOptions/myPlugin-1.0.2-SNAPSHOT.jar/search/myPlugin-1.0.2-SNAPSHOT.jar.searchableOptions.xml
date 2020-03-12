@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<options>
+  <configurable id="preferences.keymap" configurable_name="Keymap">
+    <option name="action" path="ActionManager" hit="Popup Dialog Action" />
+    <option name="dialog" path="ActionManager" hit="Popup Dialog Action" />
+    <option name="popup" path="ActionManager" hit="Popup Dialog Action" />
+    <option name="action" path="ActionManager" hit="SDK Action Example" />
+    <option name="example" path="ActionManager" hit="SDK Action Example" />
+    <option name="sdk" path="ActionManager" hit="SDK Action Example" />
+  </configurable>
+</options>
+

@@ -1,0 +1,30 @@
+<idea-plugin>
+    <id>org.example.myPlugin18</id>
+    <name>myPlugin</name>
+    <vendor email="lasini.1021@gmail.com" url="https://cmb.ac.lk/" ></vendor>
+    <!--    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>-->
+
+<!--    <description>Description</description>-->
+    <description>
+        The Ballerina IntelliJ plugin provides the &lt;a href="https://ballerina.io/"&gt;Ballerina&lt;/a&gt; development capabilities
+        in IntelliJ IDEA.
+        &lt;br&gt;&lt;br&gt;For instructions on how to download, install, and use the features of the plugin, refer the
+        &lt;a href="https://v1-0.ballerina.io/learn/tools-ides/intellij-plugin/"&gt;Ballerina IntelliJ plugin Guide&lt;/a&gt;.
+    </description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="PopupDialogAction" class="PopupDialogAction" text="Popup Dialog Action"
+                description="SDK Action Example">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>
