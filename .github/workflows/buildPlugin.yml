@@ -1,5 +1,5 @@
 name: Build and Publish Plugin
-on: repository_dispatch
+on: [repository_dispatch]
 jobs:
   gradle:
     strategy:
