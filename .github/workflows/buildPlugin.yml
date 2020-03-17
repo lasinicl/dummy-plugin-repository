@@ -1,5 +1,7 @@
 name: Build and Publish Plugin
-on: push
+on: 
+  release:
+    [published]:
 jobs:
   gradle:
     strategy:
