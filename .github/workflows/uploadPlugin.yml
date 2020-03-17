@@ -31,6 +31,7 @@ jobs:
          with:
           name: artifact
        - name: publish plugin
+         working-directory: ${{env.working-directory}}
          run: |
-              curl -i --header "Authorization: Bearer ${{ env.publish_token }}" -F pluginId=${{ env.plugin_id }} -F file=@./tool-plugins/intellij/artifact/intellij-plugin.zip -F channel=stable https://plugins.jetbrains.com/plugin/uploadPlugin 
+              curl -i --header "Authorization: Bearer ${{ env.publish_token }}" -F pluginId=${{ env.plugin_id }} -F file=@artifact/intellij-plugin.zip -F channel=stable https://plugins.jetbrains.com/plugin/uploadPlugin 
          
