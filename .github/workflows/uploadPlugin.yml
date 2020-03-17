@@ -23,6 +23,10 @@ jobs:
          working-directory: ${{env.working-directory}}
          run: |
               ./gradlew buildPlugin
+       - uses: actions/upload-artifact@v1
+         with:
+          name: artifact
+          path: ./tool-plugins/intellij/intellij-plugin.zip
        - uses: actions/download-artifact@v1
          with:
           name: artifact
