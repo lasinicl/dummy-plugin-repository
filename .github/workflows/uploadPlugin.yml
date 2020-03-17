@@ -23,7 +23,6 @@ jobs:
          working-directory: ${{env.working-directory}}
          run: |
               ./gradlew buildPlugin
-              curl -i --header "Authorization: Bearer ${{ env.publish_token }}" -F pluginId=${{ env.plugin_id }} -F file=@artifact/intellij-plugin.zip -F channel=stable https://plugins.jetbrains.com/plugin/uploadPlugin
        - uses: actions/upload-artifact@v1
          with:
           name: artifact
@@ -31,4 +30,6 @@ jobs:
        - uses: actions/download-artifact@v1
          with:
           name: artifact
+       - run: |
+              curl -i --header "Authorization: Bearer ${{ env.publish_token }}" -F pluginId=${{ env.plugin_id }} -F file=@artifact/intellij-plugin.zip -F channel=stable https://plugins.jetbrains.com/plugin/uploadPlugin 
          
