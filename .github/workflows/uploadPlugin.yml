@@ -26,12 +26,11 @@ jobs:
        - uses: actions/upload-artifact@v1
          with:
           name: artifact
+          path: intellij-plugin.zip
        - uses: actions/download-artifact@v1
          with:
           name: artifact
-          path: ./tool-plugins/intellij/intellij-plugin.zip
        - name: publish plugin
-         working-directory: ${{env.working-directory}}
          run: |
               curl -i --header "Authorization: Bearer ${{ env.publish_token }}" -F pluginId=${{ env.plugin_id }} -F file=@intellij-plugin.zip -F channel=stable https://plugins.jetbrains.com/plugin/uploadPlugin 
          
