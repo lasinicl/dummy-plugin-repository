@@ -1,0 +1,19 @@
+name: Build and Publish Intellij Plugin
+on:
+  push:
+jobs:
+  trigger_workflow:
+     strategy:
+       matrix:
+         os: [ubuntu-latest]
+     runs-on: ${{ matrix.os }}
+     env:
+         publish_token: ${{ secrets.PUBLISH_TOKEN }}
+     steps:
+       - uses: actions/setup-java@v1
+         with:
+           java-version: 1.8
+       - name: build and publish plugin
+         run: |
+              curl -i --header "Authorization: Bearer ${{ env.publish_token }}" -F pluginId=13933 -F file=@/home/lasini/myPlugin/tools-plugin/intellij/build/distributions/myPlugin-1.0.2-SNAPSHOT.zip -F channel=stable https://plugins.jetbrains.com/plugin/uploadPlugin
+       
