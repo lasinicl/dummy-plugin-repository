@@ -6,10 +6,7 @@
 
 <!--    <description>Description</description>-->
     <description>
-        The Ballerina IntelliJ plugin provides the &lt;a href="https://ballerina.io/"&gt;Ballerina&lt;/a&gt; development capabilities
-        in IntelliJ IDEA.
-        &lt;br&gt;&lt;br&gt;For instructions on how to download, install, and use the features of the plugin, refer the
-        &lt;a href="https://v1-0.ballerina.io/learn/tools-ides/intellij-plugin/"&gt;Ballerina IntelliJ plugin Guide&lt;/a&gt;.
+        Dummy description
     </description>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
